@@ -1,10 +1,10 @@
 $(document).ready(function() { 
-    const $nmb = $('.nmb')
+    
     const $siteList = $('.siteList') ;
     const $lastLi = $siteList.find('li.last');
     const x = localStorage.getItem('x')
     const xObject = JSON.parse(x) //把json字符串转换为对象
-    const hashMap = [
+    const hashMap = xObject||[
         {logo:'A',url:'https://www.acfun.cn'},
         {logo:'B',
         url:'https://www.bilibili.com'}
@@ -67,7 +67,24 @@ $(document).ready(function() {
      localStorage.setItem('x',string)
     }
     
-
+    // var func = function () {
+        
+    //         func= function(){};
+    //     }
+    //     func();
+    //     func();
+    // $(document).ready(function(){
+    //     $(document).on('keypress',(e)=>{
+    //             const {key} = e
+    //             for(let i = 0;i<hashMap.length;i++){
+    //                 if(hashMap[i].logo.toLowerCase()==key){
+    //                     window.open(hashMap[i].url)
+    //                 }
+    //             }
+           
+    //         })
+       
+    // })
     
     // let flag=true
     
@@ -82,8 +99,16 @@ $(document).ready(function() {
     //     return false
        
     // }
-
-    // });
+    // if(flag){
+    //     flag=false
+    //     
+    
+    // }else{
+    //     // flag=false
+    //     console.log(flag);
+        
+    // }
+    });
     
     // $('.nmb').blur(()=>{
     // flag=true
@@ -100,5 +125,5 @@ $(document).ready(function() {
     // })
     
     
-    }); 
+    // }); 
 
